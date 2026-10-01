@@ -322,6 +322,14 @@ a:focus-visible {
   color: #E2E8F0 !important;
 }
 
+.page-content .table-wrapper,
+.main-content .table-wrapper,
+.main .table-wrapper {
+  background-color: #111111 !important;
+  border: 1px solid rgba(255, 255, 255, .16);
+  box-shadow: none !important;
+}
+
 .page-content th,
 .page-content td,
 .main-content th,
@@ -363,6 +371,24 @@ a:focus-visible {
   border: 1px solid rgba(255, 255, 255, .14);
   background-color: #101010 !important;
   color: #E2E8F0 !important;
+}
+
+.page-content .highlighter-rouge,
+.main-content .highlighter-rouge,
+.main .highlighter-rouge,
+.page-content figure.highlight,
+.main-content figure.highlight,
+.main figure.highlight {
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 4px;
+  background-color: #101010 !important;
+  box-shadow: none !important;
+}
+
+.page-content .highlighter-rouge .highlight,
+.main-content .highlighter-rouge .highlight,
+.main .highlighter-rouge .highlight {
+  background: transparent !important;
 }
 
 .page-content pre code,
