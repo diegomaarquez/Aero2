@@ -1,0 +1,122 @@
+html,
+body,
+.main,
+.main-content,
+.main-content-wrap,
+#main-content,
+.page,
+.page-content {
+  background: linear-gradient(135deg, #12180A 0%, #1D2614 48%, #121417 100%) !important;
+  background-attachment: fixed !important;
+  color: #E2E8F0 !important;
+}
+
+.main h1,
+.main h2,
+.main h3,
+.main h4,
+.main h5,
+.main h6,
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6,
+.main strong,
+.page-content strong {
+  color: #FFFFFF !important;
+}
+
+.main p,
+.main li,
+.main ol,
+.main ul,
+.page-content p,
+.page-content li {
+  color: #CBD5E1 !important;
+}
+
+:root {
+  --link-color: #FF4A6E;
+}
+
+a,
+a:visited {
+  color: var(--link-color) !important;
+}
+
+a {
+  text-decoration-color: rgba(255, 74, 110, 0.4) !important;
+}
+
+a:hover {
+  color: #FFA3B5 !important;
+  text-decoration-color: rgba(255, 163, 181, 0.8) !important;
+}
+
+a:focus-visible {
+  outline: 2px solid #FFD5DE;
+  outline-offset: 2px;
+}
+
+.site-header {
+  background-color: #E00034 !important;
+}
+
+.site-title,
+.site-nav a {
+  color: #FFFFFF !important;
+}
+
+.main-header {
+  background: transparent !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.side-bar,
+.side-bar-container {
+  background: linear-gradient(180deg, #719A24 0%, #354D12 45%, #12180A 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh !important;
+}
+
+.side-bar .site-title {
+  color: #FFFFFF !important;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.side-bar .nav-list-link,
+.side-bar .nav-list-link:visited {
+  color: #FFFFFF !important;
+}
+
+.side-bar .nav-list-link:hover {
+  color: #FFD5DE !important;
+  background: rgba(255, 255, 255, 0.10) !important;
+}
+
+.side-bar .nav-list-link.active {
+  color: #FFFFFF !important;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.20) !important;
+}
+
+.side-bar .nav-list-link:focus-visible {
+  outline: 2px solid #FFD5DE !important;
+  outline-offset: 2px;
+}
+
+.side-bar .site-footer {
+  color: #FFFFFF !important;
+  background: transparent !important;
+}
+
+@media (max-width: 66rem) {
+  .side-bar,
+  .side-bar-container {
+    background: #354D12 !important;
+  }
+}
