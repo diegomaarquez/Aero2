@@ -1,5 +1,5 @@
-title: Aerocito2
-description: Documentacion de Aerocito2
+title: Portafolio Aero 2
+description: Proyecto de Control Avanzado y Robotica en Quanser Aero 2
 
 remote_theme: just-the-docs/just-the-docs
 plugins:
@@ -30,3 +30,4 @@ exclude:
   - "Gemfile.lock"
   - "node_modules"
   - "vendor"
+  - "Proyecto_CAR_O26.pdf"

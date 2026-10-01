@@ -6,7 +6,7 @@ body,
 #main-content,
 .page,
 .page-content {
-  background: linear-gradient(135deg, #12180A 0%, #1D2614 48%, #121417 100%) !important;
+  background: linear-gradient(135deg, #090909 0%, #171717 48%, #0B0B0B 100%) !important;
   background-attachment: fixed !important;
   color: #E2E8F0 !important;
 }
@@ -38,7 +38,7 @@ body,
 }
 
 :root {
-  --link-color: #FF4A6E;
+  --link-color: #FF4D5E;
 }
 
 a,
@@ -47,21 +47,21 @@ a:visited {
 }
 
 a {
-  text-decoration-color: rgba(255, 74, 110, 0.4) !important;
+  text-decoration-color: rgba(255, 77, 94, 0.4) !important;
 }
 
 a:hover {
-  color: #FFA3B5 !important;
-  text-decoration-color: rgba(255, 163, 181, 0.8) !important;
+  color: #FFB2BA !important;
+  text-decoration-color: rgba(255, 178, 186, 0.8) !important;
 }
 
 a:focus-visible {
-  outline: 2px solid #FFD5DE;
+  outline: 2px solid #FFD1D6;
   outline-offset: 2px;
 }
 
 .site-header {
-  background-color: #E00034 !important;
+  background-color: #B5122A !important;
 }
 
 .site-title,
@@ -77,7 +77,7 @@ a:focus-visible {
 
 .side-bar,
 .side-bar-container {
-  background: linear-gradient(180deg, #719A24 0%, #354D12 45%, #12180A 100%) !important;
+  background: linear-gradient(180deg, #3A0B12 0%, #1C0B0E 48%, #090909 100%) !important;
   background-attachment: fixed !important;
   min-height: 100vh !important;
 }
@@ -94,7 +94,7 @@ a:focus-visible {
 }
 
 .side-bar .nav-list-link:hover {
-  color: #FFD5DE !important;
+  color: #FFD1D6 !important;
   background: rgba(255, 255, 255, 0.10) !important;
 }
 
@@ -117,6 +117,6 @@ a:focus-visible {
 @media (max-width: 66rem) {
   .side-bar,
   .side-bar-container {
-    background: #354D12 !important;
+    background: #1C0B0E !important;
   }
 }
