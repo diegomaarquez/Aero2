@@ -6,30 +6,39 @@ nav_order: 2
 
 # Modelo del Quanser Aero 2
 
-## Variables del sistema
+## 1. Descripción del sistema
 
-El modelo linealizado continuo tiene cuatro estados: los ángulos de cabeceo y guiñada, y sus velocidades angulares. Las entradas son los voltajes aplicados a los motores; las salidas medidas son ambos ángulos.
-
-| Vector | Orden |
-| --- | --- |
-| Estado `x` | `[θp, θy, θ̇p, θ̇y]ᵀ` |
-| Entrada `u` | `[Vp, Vy]ᵀ` |
-| Salida `y` | `[θp, θy]ᵀ` |
-
-La representación en espacio de estados es `ẋ = Ax + Bu`, `y = Cx + Du`.
-
-## Matrices del modelo
+La plataforma Quanser Aero 2 es un helicóptero de 2 grados de libertad (2 DOF). Para el desarrollo del control, los estudiantes deben usar las siguientes matrices del sistema linealizado del Quanser Aero 2 en tiempo continuo:
 
 ```text
-A = [ 0            0     1       0       ]
-    [ 0            0     0       1       ]
-    [-Ksp/Jp       0    -Dp/Jp   0       ]
-    [ 0            0     0      -Dy/Jy   ]
+ẋ = A x + B u
+y = C x + D u
+```
 
-B = [ 0               0              ]
-    [ 0               0              ]
-    [ Dt*Kpp/Jp       Dt*Kpy/Jp       ]
-    [ Dt*Kyp/Jy       Dt*Kyy/Jy       ]
+Las variables de entrada de control son el voltaje del motor de cabeceo (`Vp`) y el voltaje del motor de guiñada (`Vy`). Las matrices del sistema están definidas por sus parámetros físicos de la siguiente forma.
+
+## 2. Variables de estado, entrada y salida
+
+| Vector | Descripción |
+| --- | --- |
+| Estado `x` | `[θp, θy, θ̇p, θ̇y]^T` |
+| Entrada `u` | `[Vp, Vy]^T` |
+| Salida `y` | `[θp, θy]^T` |
+
+Donde `θp` es el ángulo de cabeceo y `θy` es el ángulo de guiñada.
+
+## 3. Matrices del modelo linealizado
+
+```text
+A = [ 0          0      1      0      ]
+    [ 0          0      0      1      ]
+    [-Ksp/Jp     0     -Dp/Jp   0      ]
+    [ 0          0      0     -Dy/Jy   ]
+
+B = [ 0              0             ]
+    [ 0              0             ]
+    [ Dt*Kpp/Jp      Dt*Kpy/Jp      ]
+    [ Dt*Kyp/Jy      Dt*Kyy/Jy      ]
 
 C = [ 1  0  0  0 ]
     [ 0  1  0  0 ]
@@ -38,37 +47,52 @@ D = [ 0  0 ]
     [ 0  0 ]
 ```
 
-`θp` es el ángulo de cabeceo, `θy` el ángulo de guiñada, `Vp` el voltaje del motor de cabeceo y `Vy` el del motor de guiñada.
+Esta es la estructura del modelo usado para la síntesis del controlador y del observador. El estudiante debe asegurarse de que los valores físicos sean consistentes con los identificados en laboratorio.
 
-## Parámetros nominales
+## 4. Parámetros nominales del fabricante
 
-| Parámetro | Descripción | Valor nominal | Unidad |
+El Cuadro 1 del proyecto muestra los parámetros nominales del sistema Quanser Aero 2. Estos valores se usan como referencia inicial, pero el estudiantado tiene la responsabilidad de validarlos según los datos experimentales obtenidos en clase.
+
+| Parámetro | Símbolo | Valor nominal | Unidades |
 | --- | --- | ---: | --- |
-| `Dt` | Distancia del pivote al centro del rotor | 0.16743 | m |
-| `Mb` | Masa total del cuerpo aerodinámico | 1.07 | kg |
-| `Dm` | Distancia al centro de masa inferior | 2.4 × 10⁻³ | m |
-| `Jp` | Momento de inercia de cabeceo | 0.0231885 | kg·m² |
-| `Jy` | Momento de inercia de guiñada | 0.0238104 | kg·m² |
-| `g` | Gravedad | 9.81 | m/s² |
-| `Ksp` | Rigidez de cabeceo | 0.0130 | N·m/V |
-| `Dp` | Amortiguamiento de cabeceo | 0.00266 | N·m/V |
-| `Kpp` | Ganancia de empuje de cabeceo | 0.00323 | N/V |
-| `Kpy` | Empuje cruzado: guiñada a cabeceo | 0.00149 | N/V |
-| `Dy` | Amortiguamiento de guiñada | 0.00175 | N·m/V |
-| `Kyy` | Ganancia de empuje de guiñada | 0.00571 | N/V |
-| `Kyp` | Empuje cruzado: cabeceo a guiñada | −0.00235 | N/V |
+| Distancia del pivote al centro del rotor | `Dt` | 0.16743 | m |
+| Masa total del cuerpo aerodinámico | `Mb` | 1.07 | kg |
+| Distancia del plano al centro de masa inferior | `Dm` | 2.4 × 10⁻³ | m |
+| Momento de inercia (cabeceo) | `Jp` | 0.0231885 | kg·m² |
+| Momento de inercia (guiñada) | `Jy` | 0.0238104 | kg·m² |
+| Gravedad | `g` | 9.81 | m/s² |
+| Rigidez (cabeceo) | `Ksp` | 0.0130 | N·m/V |
+| Amortiguamiento (cabeceo) | `Dp` | 0.00266 | N·m/V |
+| Ganancia de empuje de cabeceo | `Kpp` | 0.00323 | N/V |
+| Empuje cruzado (cabeceo desde guiñada) | `Kpy` | 0.00149 | N/V |
+| Amortiguamiento (guiñada) | `Dy` | 0.00175 | N·m/V |
+| Ganancia de empuje de guiñada | `Kyy` | 0.00571 | N/V |
+| Empuje cruzado (guiñada desde cabeceo) | `Kyp` | -0.00235 | N/V |
 
-## Validación experimental
+## 5. Procedimiento de validación
 
-Los valores nominales son el punto de partida, no sustituyen la identificación realizada en las prácticas. Completar esta sección con:
+La validación del modelo se lleva a cabo mediante la comparación entre la respuesta esperada del modelo y las mediciones experimentales del sistema. El estudiante debe verificar:
 
-- Parámetros identificados y método de estimación.
-- Diferencias respecto a los valores nominales y su posible origen.
-- Modelo final utilizado en simulación y en el controlador.
-- Comprobación de controlabilidad y observabilidad del modelo elegido.
+1. Consistencia de las unidades y los signos de las ecuaciones.
+2. Relación entre variables de entrada y salida del sistema.
+3. Compatibilidad de los parámetros nominales con los valores identificados en laboratorio.
+4. Posibles desajustes por amortiguamiento, acoplamiento e incertidumbre del montaje.
 
-## Pendiente
+En la práctica final, este apartado se complementa con los datos reales de identificación y con el análisis de controlabilidad y observabilidad del modelo elegido.
 
-- [ ] Confirmar unidades, signos y parámetros con los datos de laboratorio.
-- [ ] Sustituir los parámetros nominales por los identificados cuando corresponda.
-- [ ] Adjuntar el procedimiento de linealización y las pruebas del modelo.
+<div class="report-figure">
+  <div class="img-placeholder">
+    <span>Imagen 1<br>Gráfica de respuesta del modelo o comparación modelo-real</span>
+  </div>
+  <p class="report-figure__caption">Figura 2. Comparación del modelo con la respuesta experimental del sistema.</p>
+</div>
+
+## 6. Controlabilidad y observabilidad
+
+El modelo debe comprobarse en términos de controlabilidad y observabilidad. Esta fase es clave para garantizar que el sistema pueda ser estabilizado mediante retroalimentación de estados y que sus variables internas puedan estimarse a partir de las salidas medidas.
+
+En la versión final del informe se incluye la comprobación numérica con las matrices pertinentes y la discusión de los resultados.
+
+## 7. Conclusión del modelado
+
+El modelo linealizado del Quanser Aero 2 permite formular una representación adecuada del sistema para el control. Sin embargo, la validez del modelo depende de la identificación experimental y de la comparación con la planta real. Este bloque se completa con los resultados de laboratorio y la versión final del modelo usado en simulación y control.

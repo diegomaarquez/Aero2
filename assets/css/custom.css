@@ -431,6 +431,34 @@ a:focus-visible {
   }
 }
 
+.report-figure {
+  margin: 2rem 0 1.5rem;
+}
+
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 15rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: linear-gradient(135deg, rgba(181, 18, 42, 0.15), rgba(255, 255, 255, 0.05));
+  color: #F8FAFC;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.report-figure__caption {
+  margin-top: 0.75rem;
+  color: #AEB4BE !important;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
 @media (max-width: 34rem) {
   .aero-chapter-grid {
     grid-template-columns: minmax(0, 1fr);
@@ -438,5 +466,9 @@ a:focus-visible {
 
   .aero-hero h1 {
     font-size: 2.45rem;
+  }
+
+  .img-placeholder {
+    min-height: 12rem;
   }
 }

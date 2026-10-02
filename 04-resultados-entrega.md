@@ -4,35 +4,63 @@ title: Implementación y entrega
 nav_order: 5
 ---
 
-# Implementación, resultados y entrega
+# Entrega y proceso de evaluación
 
-## Evidencia del proyecto
+## 1. Fechas y modalidad
 
-Organizar en esta página o enlazar desde aquí los archivos legibles y comentados, capturas de Simulink, gráficas con ejes y unidades, y videos de la plataforma funcionando en laboratorio.
+El proyecto debe presentarse en la sesión de laboratorio del día viernes 2 de octubre de 2026. La evaluación se realiza por equipos y, además, la calificación final dependerá del desempeño individual al momento de la explicación y del compromiso demostrado para con el equipo.
 
-| Evidencia | Enlace o estado |
+Se deberán entregar en Brightspace lo siguiente:
+
+- Portafolio digital del proyecto, detallando claramente el desarrollo metodológico, la arquitectura, la generación de controladores y la ejecución de los puntos solicitados.
+- Programas realizados, archivos legibles, bien estructurados y comentados.
+- Video o enlace a una carpeta con el video del sistema físico funcionando en el laboratorio.
+
+## 2. Entregables solicitados
+
+Los resultados deben documentarse e integrarse en el portafolio digital, el cual debe contener:
+
+1. Descripción y procedimiento del sistema: modelado y demostración paso a paso de la dinámica linealizada en el espacio de estados.
+2. Cálculo de ganancias `K` para LQR: descripción del proceso realizado para ajustar las matrices de ponderación y el cálculo de la ganancia `K` de la retroalimentación LQR.
+3. Cálculo de ganancias para el observador de estados: demostración y diseño del cálculo de las ganancias del observador para garantizar la estabilidad y convergencia del error de estimación para cada estado.
+4. Definición de ecuaciones del observador: demostración de la obtención de las ecuaciones que definen al observador para cada estado a partir del diagrama.
+5. Análisis y discusión de resultados: gráficas de los estados y su estimación bajo distintos escenarios, discutiendo la relación entre las métricas de control y las metodologías empleadas.
+
+## 3. Evidencia y material del proyecto
+
+| Evidencia | Estado |
 | --- | --- |
-| Modelo y simulación | Pendiente |
-| Programa del controlador | Pendiente |
-| Programa del observador | Pendiente |
-| Gráficas de estados, estimaciones y entradas | Pendiente |
-| Video de la prueba física | Pendiente |
+| Modelo y simulación | Pendiente: incluir archivo o enlace |
+| Programa del controlador | Pendiente: incluir archivo o enlace |
+| Programa del observador | Pendiente: incluir archivo o enlace |
+| Gráficas de estados y estimaciones | Pendiente: incluir figuras finales |
+| Video del sistema físico | Pendiente: incluir enlace o archivo |
 
-## Lista de entregables
+<div class="report-figure">
+  <div class="img-placeholder">
+    <span>Imagen 6<br>Captura del sistema en ejecución o de la simulación final</span>
+  </div>
+  <p class="report-figure__caption">Figura 6. Evidencia del sistema funcionando en laboratorio o simulación.</p>
+</div>
 
-- [ ] Descripción del sistema y derivación del modelo linealizado en espacio de estados.
-- [ ] Cálculo de la ganancia `K` del LQR y justificación de las matrices `Q` y `R`.
-- [ ] Cálculo de ganancias del observador y análisis de convergencia del error.
-- [ ] Derivación de las ecuaciones del observador a partir de su diagrama.
-- [ ] Gráficas de estados y estimaciones bajo distintos escenarios.
-- [ ] Análisis de desempeño, desviaciones y limitaciones del modelo.
-- [ ] Programas legibles, estructurados y comentados.
-- [ ] Video o enlace a evidencia del sistema físico funcionando.
-- [ ] Preparación para la presentación y defensa individual.
+## 4. Resultados esperados
 
-La presentación está programada para la sesión de laboratorio del **viernes 2 de octubre de 2026**. La entrega del portafolio, los programas y el video se realiza en Brightspace según las indicaciones del curso.
+La parte final del proyecto debe incluir análisis y discusión de resultados con los siguientes elementos:
 
-## Criterios de evaluación
+- gráficas de los estados y su estimación,
+- comparación de respuesta en distintas pruebas,
+- relación entre las métricas de control y la estrategia de diseño,
+- análisis de desviaciones entre modelo y planta real.
+
+| Indicador | Descripción |
+| --- | --- |
+| Tiempo de establecimiento | Indica la rapidez de respuesta |
+| Sobreimpulso | Evaluación del comportamiento transitorio |
+| Error estacionario | Precisión de seguimiento |
+| Esfuerzo de control | Voltaje aplicado por los motores |
+| Error de estimación | Calidad del observador |
+
+## 5. Criterios de evaluación
 
 La rúbrica del proyecto considera los siguientes aspectos:
 
@@ -40,7 +68,11 @@ La rúbrica del proyecto considera los siguientes aspectos:
 | --- | --- |
 | Implementación técnica (hardware y Simulink) | Modelos, programas y pruebas reproducibles |
 | Diseño y ajuste de parámetros | Justificación de `Q`, `R`, `K` y ganancias del observador |
-| Análisis de resultados | Gráficas, métricas y comparación con el modelo |
+| Análisis de resultados | Gráficas, métricas y comparación con la planta real |
 | Discusión y argumentación | Interpretación de resultados y limitaciones |
 | Portafolio y repositorio | Estructura clara, archivos comentados y evidencia completa |
 | Evaluación oral individual | Explicación del diseño, implementación y resultados |
+
+## 6. Cierre
+
+La práctica finaliza con la integración del modelo, el controlador LQR y el observador de estados. La calidad del portafolio se mide por la claridad del desarrollo metodológico, la consistencia del diseño y la capacidad de sustentación individual frente a la evaluación final.
