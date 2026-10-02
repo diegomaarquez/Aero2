@@ -359,7 +359,7 @@ a:focus-visible {
 .main code {
   border-color: rgba(255, 77, 94, .28) !important;
   background-color: #211316 !important;
-  color: #ffbebe !important;
+  color: #FFB3BD !important;
 }
 
 .page-content pre,
@@ -405,7 +405,7 @@ a:focus-visible {
 .page-content .highlight *,
 .main-content .highlight *,
 .main .highlight * {
-  color: #FFFFFF !important;
+  color: #FFB3BD !important;
 }
 
 @media (max-width: 66rem) {
