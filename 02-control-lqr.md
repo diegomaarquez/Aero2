@@ -61,9 +61,7 @@ K = R⁻¹BᵀP
 La matriz `K` es la que define la retroalimentación de estados. En la sección final, se debe documentar el valor concreto obtenido, así como la comprobación del lazo cerrado y la estabilidad del sistema.
 
 <div class="report-figure">
-  <div class="img-placeholder">
-    <span>Imagen 3<br>Diagrama del lazo LQR o ubicación de polos</span>
-  </div>
+  <img src="{{ '/assets/css/imag/modelo_LQR.png' | relative_url }}" alt="Diagrama del lazo de control LQR aplicado al Aero 2" class="report-figure__image">
   <p class="report-figure__caption">Figura 3. Estructura del regulador LQR y posición de los polos en lazo cerrado.</p>
 </div>
 
@@ -100,9 +98,7 @@ La validación del control debe incluir, como mínimo, las gráficas de:
 | Prueba de laboratorio | Valor de referencia | Condición inicial del sistema | Respuesta de la planta real |
 
 <div class="report-figure">
-  <div class="img-placeholder">
-    <span>Imagen 4<br>Gráfica temporal con referencia y voltajes Vp/Vy</span>
-  </div>
+  <img src="{{ '/assets/css/imag/observador_diagrama.png' | relative_url }}" alt="Diagrama del sistema con control LQR, observación y retroalimentación" class="report-figure__image">
   <p class="report-figure__caption">Figura 4. Respuesta del sistema en lazo cerrado y esfuerzo de control.</p>
 </div>
 

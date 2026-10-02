@@ -65,9 +65,7 @@ La validación debe realizarse comparando cada estado real y su estimación. Los
 En este punto se incluirán las gráficas superpuestas para cada estado y el análisis del error respecto al comportamiento real del sistema.
 
 <div class="report-figure">
-  <div class="img-placeholder">
-    <span>Imagen 5<br>Gráficas comparando estados reales y estimados</span>
-  </div>
+  <img src="{{ '/assets/css/imag/observador.png' | relative_url }}" alt="Esquema del observador de estados comparando señales reales y estimadas" class="report-figure__image">
   <p class="report-figure__caption">Figura 5. Estados reales frente a estimaciones del observador.</p>
 </div>
 

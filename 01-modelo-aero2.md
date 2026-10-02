@@ -81,9 +81,7 @@ La validación del modelo se lleva a cabo mediante la comparación entre la resp
 En la práctica final, este apartado se complementa con los datos reales de identificación y con el análisis de controlabilidad y observabilidad del modelo elegido.
 
 <div class="report-figure">
-  <div class="img-placeholder">
-    <span>Imagen 1<br>Gráfica de respuesta del modelo o comparación modelo-real</span>
-  </div>
+  <img src="{{ '/assets/css/imag/modelo_lqr_observador_separado.png' | relative_url }}" alt="Diagrama del modelo del sistema y su esquema controlado con LQR y observador" class="report-figure__image">
   <p class="report-figure__caption">Figura 2. Comparación del modelo con la respuesta experimental del sistema.</p>
 </div>
 

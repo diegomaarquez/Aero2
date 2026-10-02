@@ -93,8 +93,6 @@ nav_order: 1
 </section>
 
 <div class="report-figure">
-  <div class="img-placeholder">
-    <span>Imagen 0<br>Plataforma de prueba Quanser Aero 2</span>
-  </div>
+  <img src="{{ '/assets/css/imag/modelo_lqr_observ_final.png' | relative_url }}" alt="Diagrama final del sistema con control LQR y observador de estados" class="report-figure__image">
   <p class="report-figure__caption">Figura 1. Plataforma de prueba Quanser Aero 2 (helicóptero de 2 DOF).</p>
 </div>

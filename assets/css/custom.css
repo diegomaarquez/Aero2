@@ -435,6 +435,17 @@ a:focus-visible {
   margin: 2rem 0 1.5rem;
 }
 
+.report-figure__image {
+  display: block;
+  width: 100%;
+  max-width: 62rem;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #101010;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
 .video-wrapper {
   position: relative;
   width: 100%;
