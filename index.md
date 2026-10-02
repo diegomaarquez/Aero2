@@ -25,7 +25,7 @@ nav_order: 1
     </dl>
   </div>
   <figure class="aero-hero__figure">
-    <img src="{{ '/assets/aero2-product.jpg' | relative_url }}" alt="Plataforma Quanser Aero 2 con dos rotores protegidos y estructura de cabeceo y guiñada" fetchpriority="high">
+    <img src="{{ '/assets/css/imag/Aero2_foto.png' | relative_url }}" alt="Plataforma Quanser Aero 2 con dos rotores protegidos y estructura de cabeceo y guiñada" fetchpriority="high">
     <figcaption>Quanser Aero 2 · Plataforma de prueba</figcaption>
   </figure>
 </section>
