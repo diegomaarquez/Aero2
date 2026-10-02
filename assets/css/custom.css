@@ -359,7 +359,7 @@ a:focus-visible {
 .main code {
   border-color: rgba(255, 77, 94, .28) !important;
   background-color: #211316 !important;
-  color: #FFD1D6 !important;
+  color: #FFFFFF !important;
 }
 
 .page-content pre,
@@ -399,72 +399,13 @@ a:focus-visible {
   color: inherit !important;
 }
 
-.page-content .highlight .k,
-.page-content .highlight .kd,
-.page-content .highlight .kn,
-.page-content .highlight .kp,
-.page-content .highlight .kr,
-.page-content .highlight .kt,
-.main-content .highlight .k,
-.main-content .highlight .kd,
-.main-content .highlight .kn,
-.main-content .highlight .kp,
-.main-content .highlight .kr,
-.main-content .highlight .kt {
-  color: #93C5FD !important;
-}
-
-.page-content .highlight .s,
-.page-content .highlight .s1,
-.page-content .highlight .s2,
-.main-content .highlight .s,
-.main-content .highlight .s1,
-.main-content .highlight .s2 {
-  color: #86EFAC !important;
-}
-
-.page-content .highlight .m,
-.page-content .highlight .mi,
-.page-content .highlight .mf,
-.page-content .highlight .mh,
-.page-content .highlight .mo,
-.main-content .highlight .m,
-.main-content .highlight .mi,
-.main-content .highlight .mf,
-.main-content .highlight .mh,
-.main-content .highlight .mo {
-  color: #FCA5A5 !important;
-}
-
-.page-content .highlight .c,
-.page-content .highlight .c1,
-.page-content .highlight .cm,
-.page-content .highlight .cp,
-.page-content .highlight .cs,
-.main-content .highlight .c,
-.main-content .highlight .c1,
-.main-content .highlight .cm,
-.main-content .highlight .cp,
-.main-content .highlight .cs {
-  color: #CBD5E1 !important;
-}
-
-.page-content .highlight .nf,
-.page-content .highlight .nb,
-.page-content .highlight .nc,
-.main-content .highlight .nf,
-.main-content .highlight .nb,
-.main-content .highlight .nc {
-  color: #FDE68A !important;
-}
-
-.page-content .highlight .o,
-.page-content .highlight .ow,
-.page-content .highlight .p,
-.main-content .highlight .o,
-.main-content .highlight .ow,
-.main-content .highlight .p {
-  color: #E2E8F0 !important;
+.page-content pre *,
+.main-content pre *,
+.main pre *,
+.page-content .highlight *,
+.main-content .highlight *,
+.main .highlight * {
+  color: #FFFFFF !important;
 }
 
 @media (max-width: 66rem) {
