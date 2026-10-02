@@ -189,7 +189,6 @@ a:focus-visible {
   height: 24rem;
   object-fit: cover;
   object-position: center top;
-  mix-blend-mode: multiply;
 }
 
 .aero-hero__figure figcaption {
