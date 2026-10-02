@@ -46,6 +46,32 @@ Se debe documentar:
 - polos del error,
 - condiciones de inicialización del observador.
 
+### Cálculo simbólico del polinomio deseado
+
+El fragmento proporcionado iguala los coeficientes del polinomio del observador con los de `(s + p)^3`. Para `p = 100`, el polinomio deseado es `s^3 + 300s^2 + 30000s + 1000000`.
+
+```matlab
+syms s beta l m
+p = 100;
+
+pol_obs = s^3 + beta*s^2 + l*s + (l*beta + m);
+pol_des = expand((s + p)^3);
+
+coef_obs = coeffs(pol_obs, s, 'All');
+coef_des = coeffs(pol_des, s, 'All');
+
+eq1 = coef_obs(2) == coef_des(2);
+eq2 = coef_obs(3) == coef_des(3);
+eq3 = coef_obs(4) == coef_des(4);
+
+solucion = solve([eq1, eq2, eq3], [beta, l, m]);
+beta = double(solucion.beta)
+l = double(solucion.l)
+m = double(solucion.m)
+```
+
+La igualación produce `beta = 300`, `l = 30000` y `m = -8000000`. Este fragmento calcula los coeficientes del polinomio descrito; por sí solo no calcula la matriz de ganancias `L` ni verifica los polos de `A - LC` para las matrices del modelo. La matriz `L` debe obtenerse y comprobarse a partir de la formulación completa del observador implementado.
+
 | Elemento | Descripción |
 | --- | --- |
 | Ganancia `L` | Valor final del observador |
