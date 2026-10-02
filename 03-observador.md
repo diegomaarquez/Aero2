@@ -46,23 +46,32 @@ Se debe documentar:
 - polos del error,
 - condiciones de inicialización del observador.
 
-### Cálculo simbólico del polinomio deseado
+### Polinomio característico y selección de coeficientes
 
-El fragmento proporcionado iguala los coeficientes del polinomio del observador con los de `(s + p)^3`. Para `p = 100`, el polinomio deseado es `s^3 + 300s^2 + 30000s + 1000000`.
+Para la realización de tercer orden usada en el cálculo, el polinomio característico se obtiene de `det(sI - A)`. Las matrices `B` y `C` se incluyen como en el código original; el determinante característico depende de `A`.
 
 ```matlab
-syms s beta l m
-p = 100;
+syms s l beta m
 
-pol_obs = s^3 + beta*s^2 + l*s + (l*beta + m);
+A = [0 1 0;
+  -l 0 m;
+  -1 0 beta];
+
+B = [0; l; 1];
+C = [1 0 0];
+
+pc = collect(det(s*eye(size(A)) - A), s)
+```
+
+La expansión es `pc = s^3 - beta*s^2 + l*s - l*beta + m`. Si se desean tres polos en `-p`, se iguala con `(s + p)^3`. El cálculo de coeficientes queda:
+
+```matlab
+p = 100;
 pol_des = expand((s + p)^3);
 
-coef_obs = coeffs(pol_obs, s, 'All');
-coef_des = coeffs(pol_des, s, 'All');
-
-eq1 = coef_obs(2) == coef_des(2);
-eq2 = coef_obs(3) == coef_des(3);
-eq3 = coef_obs(4) == coef_des(4);
+eq1 = -beta == 3*p;
+eq2 = l == 3*p^2;
+eq3 = -l*beta + m == p^3;
 
 solucion = solve([eq1, eq2, eq3], [beta, l, m]);
 beta = double(solucion.beta)
@@ -70,7 +79,7 @@ l = double(solucion.l)
 m = double(solucion.m)
 ```
 
-La igualación produce `beta = 300`, `l = 30000` y `m = -8000000`. Este fragmento calcula los coeficientes del polinomio descrito; por sí solo no calcula la matriz de ganancias `L` ni verifica los polos de `A - LC` para las matrices del modelo. La matriz `L` debe obtenerse y comprobarse a partir de la formulación completa del observador implementado.
+Para `p = 100`, el polinomio deseado es `s^3 + 300s^2 + 30000s + 1000000` y los coeficientes son `beta = -300`, `l = 30000` y `m = -8000000`. Estos valores corresponden a la matriz auxiliar `A` de tercer orden mostrada aquí; no son la matriz de ganancias `L` del observador de cuarto orden del modelo Aero 2. Para obtener `L` se necesita formular y resolver la asignación de polos de `A_modelo - L*C`.
 
 | Elemento | Descripción |
 | --- | --- |
