@@ -65,8 +65,13 @@ La validación debe realizarse comparando cada estado real y su estimación. Los
 En este punto se incluirán las gráficas superpuestas para cada estado y el análisis del error respecto al comportamiento real del sistema.
 
 <div class="report-figure">
-  <img src="{{ '/assets/css/imag/observador.png' | relative_url }}" alt="Esquema del observador de estados comparando señales reales y estimadas" class="report-figure__image">
-  <p class="report-figure__caption">Figura 5. Estados reales frente a estimaciones del observador.</p>
+  <img src="{{ '/assets/css/imag/observador.png' | relative_url }}" alt="Diagrama del observador de estados implementado" class="report-figure__image">
+  <p class="report-figure__caption">Figura 5. Diagrama del observador de estados implementado.</p>
+</div>
+
+<div class="report-figure">
+  <img src="{{ '/assets/css/imag/observador_diagrama.png' | relative_url }}" alt="Implementación integrada de la planta Quanser y el observador de estados" class="report-figure__image">
+  <p class="report-figure__caption">Figura 6. Integración del observador de estados con la planta Quanser.</p>
 </div>
 
 ## 5. Resultados y discusión

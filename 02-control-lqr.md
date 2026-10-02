@@ -61,8 +61,8 @@ K = R⁻¹BᵀP
 La matriz `K` es la que define la retroalimentación de estados. En la sección final, se debe documentar el valor concreto obtenido, así como la comprobación del lazo cerrado y la estabilidad del sistema.
 
 <div class="report-figure">
-  <img src="{{ '/assets/css/imag/modelo_LQR.png' | relative_url }}" alt="Diagrama del lazo de control LQR aplicado al Aero 2" class="report-figure__image">
-  <p class="report-figure__caption">Figura 3. Estructura del regulador LQR y posición de los polos en lazo cerrado.</p>
+  <img src="{{ '/assets/css/imag/modelo_LQR.png' | relative_url }}" alt="Lazo cerrado LQR del modelo con el filtro Quanser que proporciona los estados actuales" class="report-figure__image">
+  <p class="report-figure__caption">Figura 3. Lazo cerrado del modelo LQR con el filtro Quanser proporcionando los estados actuales.</p>
 </div>
 
 ## 5. Diseño y ajuste práctico
@@ -98,8 +98,8 @@ La validación del control debe incluir, como mínimo, las gráficas de:
 | Prueba de laboratorio | Valor de referencia | Condición inicial del sistema | Respuesta de la planta real |
 
 <div class="report-figure">
-  <img src="{{ '/assets/css/imag/observador_diagrama.png' | relative_url }}" alt="Diagrama del sistema con control LQR, observación y retroalimentación" class="report-figure__image">
-  <p class="report-figure__caption">Figura 4. Respuesta del sistema en lazo cerrado y esfuerzo de control.</p>
+  <img src="{{ '/assets/css/imag/modelo_lqr_observador_separado.png' | relative_url }}" alt="Modelo LQR con observador para visualizar su respuesta, manteniendo cerrado el lazo con el filtro Quanser" class="report-figure__image">
+  <p class="report-figure__caption">Figura 4. Respuesta del LQR con el observador; el lazo permanece cerrado con el filtro Quanser.</p>
 </div>
 
 ## 7. Conclusión

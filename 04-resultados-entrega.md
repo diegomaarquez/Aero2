@@ -37,10 +37,15 @@ Los resultados deben documentarse e integrarse en el portafolio digital, el cual
 | Video del sistema físico | Enlace o archivo del sistema funcionando |
 
 <div class="report-figure">
+  <img src="{{ '/assets/css/imag/modelo_lqr_observ_final.png' | relative_url }}" alt="Resultado final del lazo cerrado LQR con el observador planteado" class="report-figure__image">
+  <p class="report-figure__caption">Figura 7. Resultado final del lazo cerrado LQR con el observador planteado.</p>
+</div>
+
+<div class="report-figure">
   <div class="video-wrapper">
     <iframe src="https://www.youtube.com/embed/Ow0opi5Q_fY?rel=0" title="Video de demostración: lecturas observador vs real de LQR con lazo cerrado mediante el observador" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
-  <p class="report-figure__caption">Video de demostración: lecturas del observador frente a la señal real del lazo cerrado con LQR.</p>
+  <p class="report-figure__caption">Video de demostración lecturas observador vs real de LQR con lazo cerrado mediante el observador.</p>
 </div>
 
 ## 4. Resultados esperados

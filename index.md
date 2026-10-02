@@ -92,7 +92,3 @@ nav_order: 1
   <p>El objetivo del controlador será regular los ángulos de cabeceo (pitch) y guiñada (yaw) hacia un conjunto de referencias deseadas. El desarrollo del control debe usar el modelo linealizado del sistema, fijando la atención en las entradas de voltaje del motor de cabeceo y del motor de guiñada.</p>
 </section>
 
-<div class="report-figure">
-  <img src="{{ '/assets/css/imag/modelo_lqr_observ_final.png' | relative_url }}" alt="Diagrama final del sistema con control LQR y observador de estados" class="report-figure__image">
-  <p class="report-figure__caption">Figura 1. Plataforma de prueba Quanser Aero 2 (helicóptero de 2 DOF).</p>
-</div>
