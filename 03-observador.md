@@ -54,12 +54,13 @@ Para la realización de tercer orden usada en el cálculo, el polinomio caracter
 syms s l beta m
 
 A = [0 1 0;
-  -l 0 m;
-  -1 0 beta];
+    -l 0 m;
+    -1 0 beta];
 
 B = [0; l; 1];
 C = [1 0 0];
 
+% characteristic polynomial (expanded)
 pc = collect(det(s*eye(size(A)) - A), s)
 ```
 
