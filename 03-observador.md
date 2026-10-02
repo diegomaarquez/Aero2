@@ -46,12 +46,12 @@ Se debe documentar:
 - polos del error,
 - condiciones de inicialización del observador.
 
-| Elemento | Pendiente del informe |
+| Elemento | Descripción |
 | --- | --- |
-| Ganancia `L` | Incluir valor final |
-| Polos de error | Mostrar ubicación computada |
-| Estabilidad | Verificar convergencia del error |
-| Inicialización `x̂` | Describir la condición inicial |
+| Ganancia `L` | Valor final del observador |
+| Polos de error | Ubicación computada del error de estimación |
+| Estabilidad | Verificación de la convergencia del error |
+| Inicialización `x̂` | Condición inicial de la estimación |
 
 ## 4. Validación del observador
 

@@ -30,17 +30,17 @@ Los resultados deben documentarse e integrarse en el portafolio digital, el cual
 
 | Evidencia | Estado |
 | --- | --- |
-| Modelo y simulación | Pendiente: incluir archivo o enlace |
-| Programa del controlador | Pendiente: incluir archivo o enlace |
-| Programa del observador | Pendiente: incluir archivo o enlace |
-| Gráficas de estados y estimaciones | Pendiente: incluir figuras finales |
-| Video del sistema físico | Pendiente: incluir enlace o archivo |
+| Modelo y simulación | Archivo o enlace del modelo y simulación |
+| Programa del controlador | Archivo o enlace del controlador implementado |
+| Programa del observador | Archivo o enlace del observador implementado |
+| Gráficas de estados y estimaciones | Figuras finales del comportamiento del sistema |
+| Video del sistema físico | Enlace o archivo del sistema funcionando |
 
 <div class="report-figure">
-  <div class="img-placeholder">
-    <span>Imagen 6<br>Captura del sistema en ejecución o de la simulación final</span>
+  <div class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/Ow0opi5Q_fY?rel=0" title="Video de demostración: lecturas observador vs real de LQR con lazo cerrado mediante el observador" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
-  <p class="report-figure__caption">Figura 6. Evidencia del sistema funcionando en laboratorio o simulación.</p>
+  <p class="report-figure__caption">Video de demostración: lecturas del observador frente a la señal real del lazo cerrado con LQR.</p>
 </div>
 
 ## 4. Resultados esperados

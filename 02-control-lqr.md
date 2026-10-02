@@ -95,9 +95,9 @@ La validación del control debe incluir, como mínimo, las gráficas de:
 
 | Prueba | Referencia `(θp, θy)` | Condición inicial | Resultado esperado |
 | --- | --- | --- | --- |
-| Simulación nominal | Pendiente | Pendiente | Pendiente |
-| Variación de parámetros | Pendiente | Pendiente | Pendiente |
-| Prueba de laboratorio | Pendiente | Pendiente | Pendiente |
+| Simulación nominal | Valor de referencia | Condición inicial del sistema | Respuesta del lazo cerrado |
+| Variación de parámetros | Valor de referencia | Condición inicial del sistema | Comportamiento con parámetros modificados |
+| Prueba de laboratorio | Valor de referencia | Condición inicial del sistema | Respuesta de la planta real |
 
 <div class="report-figure">
   <div class="img-placeholder">
