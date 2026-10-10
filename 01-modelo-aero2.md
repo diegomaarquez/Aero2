@@ -71,7 +71,7 @@ El Cuadro 1 del proyecto muestra los parámetros nominales del sistema Quanser A
 
 ## 5. Procedimiento de validación
 
-La validación contrasta la respuesta del modelo con las mediciones experimentales y considera unidades, signos, acoplamiento e incertidumbre de los parámetros. El procedimiento de identificación y sus resultados se desarrollan en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
+La validación contrasta la respuesta del modelo con las mediciones experimentales y considera unidades, signos, acoplamiento e incertidumbre de los parámetros. Los resultados de esta comparación se presentan en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).
 
 <div class="report-figure">
   <img src="{{ '/assets/css/imag/modelo_lqr_observador_separado.png' | relative_url }}" alt="Diagrama del modelo del sistema y su esquema controlado con LQR y observador" class="report-figure__image">
@@ -80,8 +80,4 @@ La validación contrasta la respuesta del modelo con las mediciones experimental
 
 ## 6. Controlabilidad y observabilidad
 
-La controlabilidad y la observabilidad caracterizan, respectivamente, la posibilidad de estabilizar la planta mediante retroalimentación de estados y de reconstruir sus variables internas a partir de las salidas medidas. La comprobación numérica correspondiente se presenta en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
-
-## 7. Conclusión del modelado
-
-El modelo linealizado del Quanser Aero 2 proporciona la representación en espacio de estados utilizada para el diseño del controlador y del observador. Su contraste con la planta, junto con los resultados de laboratorio, se recoge en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
+La controlabilidad y la observabilidad caracterizan, respectivamente, la posibilidad de estabilizar la planta mediante retroalimentación de estados y de reconstruir sus variables internas a partir de las salidas medidas. La comprobación numérica correspondiente se presenta en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).

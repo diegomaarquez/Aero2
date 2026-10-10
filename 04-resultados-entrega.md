@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Integración y evidencia
+title: Resultados y conclusiones
 nav_order: 5
 ---
 
-# Integración y evidencia experimental
+# Resultados y conclusiones
 
-El sistema integra el modelo linealizado del Quanser Aero 2, el controlador LQR y el observador de estados. La evidencia visual de la arquitectura y de su funcionamiento se presenta a continuación; el desarrollo metodológico, las gráficas y el análisis cuantitativo están reunidos en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
+El sistema integra el modelo linealizado del Quanser Aero 2, el controlador LQR y el observador de estados. A continuación se presentan la evidencia de funcionamiento y la síntesis de resultados; los procedimientos, las gráficas y el análisis cuantitativo completo están disponibles en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
 
 <div class="report-figure">
   <img src="{{ '/assets/css/imag/modelo_lqr_observ_final.png' | relative_url }}" alt="Resultado final del lazo cerrado LQR con el observador planteado" class="report-figure__image">
@@ -20,6 +20,10 @@ El sistema integra el modelo linealizado del Quanser Aero 2, el controlador LQR 
   <p class="report-figure__caption">Video de demostración lecturas observador vs real de LQR con lazo cerrado mediante el observador.</p>
 </div>
 
-## Análisis de resultados
+## Resultados
 
-El informe técnico reúne los procedimientos, las respuestas del sistema, las métricas de control y estimación, y la comparación entre el modelo y la planta. El documento completo puede consultarse en la sección [Informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
+El video muestra la respuesta del observador frente a las mediciones reales durante el control en lazo cerrado. El informe técnico reúne las respuestas del sistema, las métricas de control y estimación, y la comparación entre el modelo y la planta.
+
+## Conclusiones
+
+El modelo linealizado proporciona la base común para el diseño del controlador LQR y del observador de estados. La integración de ambos permite utilizar las estimaciones de estado en la ley de control y evaluar conjuntamente el seguimiento de referencias y la reconstrucción de las variables internas. La comparación entre las señales estimadas y medidas, junto con las métricas experimentales, permite valorar el desempeño del sistema completo; el detalle cuantitativo se encuentra en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).

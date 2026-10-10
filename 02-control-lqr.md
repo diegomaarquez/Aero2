@@ -112,15 +112,11 @@ La ley calculada es `u = -K_lqr x`. Los valores que MATLAB muestra para `K_lqr` 
   <p class="report-figure__caption">Figura 3. Lazo cerrado del modelo LQR con el filtro Quanser proporcionando los estados actuales.</p>
 </div>
 
-## 5. Implementación y resultados
+## 5. Implementación
 
-La implementación calcula la ganancia LQR a partir del modelo linealizado y las ponderaciones indicadas, y evalúa los polos de la matriz de lazo cerrado. Las respuestas de cabeceo y guiñada, las señales de control y la comparación experimental se documentan con mayor detalle en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
+La implementación calcula la ganancia LQR a partir del modelo linealizado y las ponderaciones indicadas, y evalúa los polos de la matriz de lazo cerrado. Las respuestas de cabeceo y guiñada, las señales de control y la comparación experimental se presentan en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).
 
 <div class="report-figure">
   <img src="{{ '/assets/css/imag/modelo_lqr_observador_separado.png' | relative_url }}" alt="Modelo LQR con observador para visualizar su respuesta, manteniendo cerrado el lazo con el filtro Quanser" class="report-figure__image">
   <p class="report-figure__caption">Figura 4. Respuesta del LQR con el observador; el lazo permanece cerrado con el filtro Quanser.</p>
 </div>
-
-## 7. Conclusión
-
-El regulador LQR aplica retroalimentación de estados para regular los ángulos de cabeceo y guiñada del Aero 2. La selección de ponderaciones, la ganancia calculada y la evaluación del desempeño en simulación y laboratorio se reúnen en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).

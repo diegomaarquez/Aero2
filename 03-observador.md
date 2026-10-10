@@ -37,11 +37,11 @@ Esto muestra claramente que el diseño del observador depende de la ubicación d
 
 ## 3. Diseño de la ganancia del observador
 
-La ganancia `L` determina la rapidez y estabilidad de la convergencia del error. Su cálculo, los polos resultantes y las condiciones de inicialización del observador Aero 2 se desarrollan en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
+La ganancia `L` determina la rapidez y estabilidad de la convergencia del error. Su cálculo, los polos resultantes y las condiciones de inicialización del observador Aero 2 se presentan en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).
 
 ## 4. Validación del observador
 
-La evaluación compara los estados de la planta con sus estimaciones y considera el error, la convergencia y la respuesta ante cambios de referencia. Las gráficas y el análisis detallado se incluyen en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
+La evaluación compara los estados de la planta con sus estimaciones y considera el error, la convergencia y la respuesta ante cambios de referencia. Las gráficas y el análisis se presentan en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).
 
 <div class="report-figure">
   <img src="{{ '/assets/css/imag/observador.png' | relative_url }}" alt="Diagrama del observador de estados implementado" class="report-figure__image">
@@ -52,11 +52,3 @@ La evaluación compara los estados de la planta con sus estimaciones y considera
   <img src="{{ '/assets/css/imag/observador_diagrama.png' | relative_url }}" alt="Implementación integrada de la planta Quanser y el observador de estados" class="report-figure__image">
   <p class="report-figure__caption">Figura 6. Integración del observador de estados con la planta Quanser.</p>
 </div>
-
-## 5. Resultados y discusión
-
-El análisis relaciona el desempeño del control con la precisión de las estimaciones utilizadas por el LQR, además de considerar la sensibilidad al ruido y a la incertidumbre del modelo. Los resultados cuantitativos se presentan en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
-
-## 6. Conclusión
-
-El observador complementa las mediciones de salida con estimaciones de los estados internos y permite cerrar el lazo LQR con la arquitectura integrada. La respuesta y el error de estimación quedan documentados en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
