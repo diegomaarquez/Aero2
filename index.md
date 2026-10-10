@@ -75,7 +75,11 @@ nav_order: 1
     </a>
     <a class="aero-chapter" href="{{ '/04-resultados-entrega/' | relative_url }}">
       <span class="aero-chapter__number">04</span>
-      <span class="aero-chapter__text"><strong>Entrega y resultados</strong><small>Entregables, evidencia y evaluación final</small></span>
+      <span class="aero-chapter__text"><strong>Integración y evidencia</strong><small>Arquitectura integrada y demostración experimental</small></span>
+    </a>
+    <a class="aero-chapter" href="{{ '/05-informe-tecnico/' | relative_url }}">
+      <span class="aero-chapter__number">05</span>
+      <span class="aero-chapter__text"><strong>Informe técnico</strong><small>Procedimientos y resultados completos en PDF</small></span>
     </a>
   </div>
 </section>
@@ -89,6 +93,6 @@ nav_order: 1
     <p>Helicóptero de 2 grados de libertad.</p>
   </div>
 
-  <p>El objetivo del controlador será regular los ángulos de cabeceo (pitch) y guiñada (yaw) hacia un conjunto de referencias deseadas. El desarrollo del control debe usar el modelo linealizado del sistema, fijando la atención en las entradas de voltaje del motor de cabeceo y del motor de guiñada.</p>
+  <p>El controlador regula los ángulos de cabeceo (pitch) y guiñada (yaw) mediante el modelo linealizado del sistema y las entradas de voltaje de los motores correspondientes.</p>
 </section>
 

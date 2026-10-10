@@ -30,4 +30,3 @@ exclude:
   - "Gemfile.lock"
   - "node_modules"
   - "vendor"
-  - "Proyecto_CAR_O26.pdf"

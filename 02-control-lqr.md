@@ -42,7 +42,7 @@ Donde:
 - `Q` pondera el error de estado,
 - `R` pondera la agresividad del control.
 
-El diseño debe equilibrar la velocidad de respuesta con el esfuerzo de los motores. En la práctica, se debe justificar la elección de las matrices `Q` y `R` según la escala de cada variable y la exigencia del desempeño deseado.
+Las matrices `Q` y `R` establecen el equilibrio entre el seguimiento de los estados y el esfuerzo de los motores. En la implementación presentada, las ponderaciones son `Q = diag(500, 80, 0, 0)` y `R = diag(0.02, 0.02)`.
 
 ## 4. Cálculo de la ganancia K
 
@@ -58,7 +58,7 @@ y luego:
 K = R⁻¹BᵀP
 ```
 
-La matriz `K` es la que define la retroalimentación de estados. En la sección final, se debe documentar el valor concreto obtenido, así como la comprobación del lazo cerrado y la estabilidad del sistema.
+La matriz `K` define la retroalimentación de estados. El script calcula la ganancia con `lqr` y obtiene los polos del lazo cerrado; los valores numéricos y el análisis de estabilidad se presentan en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
 
 ### Script MATLAB del modelo y el controlador
 
@@ -112,37 +112,9 @@ La ley calculada es `u = -K_lqr x`. Los valores que MATLAB muestra para `K_lqr` 
   <p class="report-figure__caption">Figura 3. Lazo cerrado del modelo LQR con el filtro Quanser proporcionando los estados actuales.</p>
 </div>
 
-## 5. Diseño y ajuste práctico
+## 5. Implementación y resultados
 
-El proceso se desarrolla en varias etapas:
-
-1. Se usa el modelo linealizado y sus parámetros nominales.
-2. Se eligen `Q` y `R` según la prioridad de cada estado y la limitación de actuación.
-3. Se resuelve el problema de Riccati para obtener `K`.
-4. Se validan la estabilidad, el error y la actuación de los motores.
-5. Se analiza la influencia de la saturación de voltaje y la diferencia con la planta real.
-
-| Aspecto | Resultado esperado |
-| --- | --- |
-| Matriz `Q` | Ponderación de errores de estado |
-| Matriz `R` | Ponderación del esfuerzo de control |
-| Ganancia `K` | Valor final obtenido del LQR |
-| Polos del lazo cerrado | Verificación de estabilidad |
-| Saturación | Tratamiento de límites físicos |
-
-## 6. Resultados esperados
-
-La validación del control debe incluir, como mínimo, las gráficas de:
-
-- referencia versus respuesta de `θp` y `θy`,
-- señales de entrada `Vp` y `Vy`,
-- comparación de desempeño para distintas condiciones iniciales o referencias.
-
-| Prueba | Referencia `(θp, θy)` | Condición inicial | Resultado esperado |
-| --- | --- | --- | --- |
-| Simulación nominal | Valor de referencia | Condición inicial del sistema | Respuesta del lazo cerrado |
-| Variación de parámetros | Valor de referencia | Condición inicial del sistema | Comportamiento con parámetros modificados |
-| Prueba de laboratorio | Valor de referencia | Condición inicial del sistema | Respuesta de la planta real |
+La implementación calcula la ganancia LQR a partir del modelo linealizado y las ponderaciones indicadas, y evalúa los polos de la matriz de lazo cerrado. Las respuestas de cabeceo y guiñada, las señales de control y la comparación experimental se documentan con mayor detalle en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
 
 <div class="report-figure">
   <img src="{{ '/assets/css/imag/modelo_lqr_observador_separado.png' | relative_url }}" alt="Modelo LQR con observador para visualizar su respuesta, manteniendo cerrado el lazo con el filtro Quanser" class="report-figure__image">
@@ -151,4 +123,4 @@ La validación del control debe incluir, como mínimo, las gráficas de:
 
 ## 7. Conclusión
 
-El regulador LQR permite equilibrar precisión y esfuerzo de control para la plataforma Aero 2. El diseño final debe justificar ordenadamente la elección de ponderaciones y la ganancia obtenida, además de discutir la comparación entre la simulación y la planta física en laboratorio.
+El regulador LQR aplica retroalimentación de estados para regular los ángulos de cabeceo y guiñada del Aero 2. La selección de ponderaciones, la ganancia calculada y la evaluación del desempeño en simulación y laboratorio se reúnen en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).

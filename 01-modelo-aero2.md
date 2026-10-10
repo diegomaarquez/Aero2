@@ -8,7 +8,7 @@ nav_order: 2
 
 ## 1. Descripción del sistema
 
-La plataforma Quanser Aero 2 es un helicóptero de 2 grados de libertad (2 DOF). Para el desarrollo del control, los estudiantes deben usar las siguientes matrices del sistema linealizado del Quanser Aero 2 en tiempo continuo:
+La plataforma Quanser Aero 2 es un helicóptero de dos grados de libertad (2 DOF). Para el diseño del control se utiliza el siguiente modelo linealizado en tiempo continuo:
 
 ```text
 ẋ = A x + B u
@@ -47,7 +47,7 @@ D = [ 0  0 ]
     [ 0  0 ]
 ```
 
-Esta es la estructura del modelo usado para la síntesis del controlador y del observador. El estudiante debe asegurarse de que los valores físicos sean consistentes con los identificados en laboratorio.
+Esta estructura corresponde al modelo empleado en la síntesis del controlador y del observador. Los parámetros nominales se contrastan con la identificación experimental presentada en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
 
 ## 4. Parámetros nominales del fabricante
 
@@ -71,14 +71,7 @@ El Cuadro 1 del proyecto muestra los parámetros nominales del sistema Quanser A
 
 ## 5. Procedimiento de validación
 
-La validación del modelo se lleva a cabo mediante la comparación entre la respuesta esperada del modelo y las mediciones experimentales del sistema. El estudiante debe verificar:
-
-1. Consistencia de las unidades y los signos de las ecuaciones.
-2. Relación entre variables de entrada y salida del sistema.
-3. Compatibilidad de los parámetros nominales con los valores identificados en laboratorio.
-4. Posibles desajustes por amortiguamiento, acoplamiento e incertidumbre del montaje.
-
-En la práctica final, este apartado se complementa con los datos reales de identificación y con el análisis de controlabilidad y observabilidad del modelo elegido.
+La validación contrasta la respuesta del modelo con las mediciones experimentales y considera unidades, signos, acoplamiento e incertidumbre de los parámetros. El procedimiento de identificación y sus resultados se desarrollan en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
 
 <div class="report-figure">
   <img src="{{ '/assets/css/imag/modelo_lqr_observador_separado.png' | relative_url }}" alt="Diagrama del modelo del sistema y su esquema controlado con LQR y observador" class="report-figure__image">
@@ -87,10 +80,8 @@ En la práctica final, este apartado se complementa con los datos reales de iden
 
 ## 6. Controlabilidad y observabilidad
 
-El modelo debe comprobarse en términos de controlabilidad y observabilidad. Esta fase es clave para garantizar que el sistema pueda ser estabilizado mediante retroalimentación de estados y que sus variables internas puedan estimarse a partir de las salidas medidas.
-
-En la versión final del informe se incluye la comprobación numérica con las matrices pertinentes y la discusión de los resultados.
+La controlabilidad y la observabilidad caracterizan, respectivamente, la posibilidad de estabilizar la planta mediante retroalimentación de estados y de reconstruir sus variables internas a partir de las salidas medidas. La comprobación numérica correspondiente se presenta en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
 
 ## 7. Conclusión del modelado
 
-El modelo linealizado del Quanser Aero 2 permite formular una representación adecuada del sistema para el control. Sin embargo, la validez del modelo depende de la identificación experimental y de la comparación con la planta real. Este bloque se completa con los resultados de laboratorio y la versión final del modelo usado en simulación y control.
+El modelo linealizado del Quanser Aero 2 proporciona la representación en espacio de estados utilizada para el diseño del controlador y del observador. Su contraste con la planta, junto con los resultados de laboratorio, se recoge en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
