@@ -75,7 +75,7 @@ nav_order: 1
     </a>
     <a class="aero-chapter" href="{{ '/04-resultados-entrega/' | relative_url }}">
       <span class="aero-chapter__number">04</span>
-      <span class="aero-chapter__text"><strong>Resultados y conclusiones</strong><small>Video, análisis experimental y síntesis del proyecto</small></span>
+      <span class="aero-chapter__text"><strong>Integración y evidencia</strong><small>Resultados, video y conclusiones del proyecto</small></span>
     </a>
     <a class="aero-chapter" href="{{ '/05-informe-tecnico/' | relative_url }}">
       <span class="aero-chapter__number">05</span>

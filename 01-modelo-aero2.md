@@ -71,7 +71,7 @@ El Cuadro 1 del proyecto muestra los parámetros nominales del sistema Quanser A
 
 ## 5. Procedimiento de validación
 
-La validación contrasta la respuesta del modelo con las mediciones experimentales y considera unidades, signos, acoplamiento e incertidumbre de los parámetros. Los resultados de esta comparación se presentan en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).
+La validación contrasta la respuesta del modelo con las mediciones experimentales y considera unidades, signos, acoplamiento e incertidumbre de los parámetros. La evidencia experimental se presenta en [Integración y evidencia]({{ '/04-resultados-entrega/' | relative_url }}).
 
 <div class="report-figure">
   <img src="{{ '/assets/css/imag/modelo_lqr_observador_separado.png' | relative_url }}" alt="Diagrama del modelo del sistema y su esquema controlado con LQR y observador" class="report-figure__image">
@@ -80,4 +80,4 @@ La validación contrasta la respuesta del modelo con las mediciones experimental
 
 ## 6. Controlabilidad y observabilidad
 
-La controlabilidad y la observabilidad caracterizan, respectivamente, la posibilidad de estabilizar la planta mediante retroalimentación de estados y de reconstruir sus variables internas a partir de las salidas medidas. La comprobación numérica correspondiente se presenta en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).
+La controlabilidad y la observabilidad caracterizan, respectivamente, la posibilidad de estabilizar la planta mediante retroalimentación de estados y de reconstruir sus variables internas a partir de las salidas medidas. La comprobación numérica correspondiente se presenta en [Integración y evidencia]({{ '/04-resultados-entrega/' | relative_url }}).

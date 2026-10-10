@@ -37,11 +37,11 @@ Esto muestra claramente que el diseño del observador depende de la ubicación d
 
 ## 3. Diseño de la ganancia del observador
 
-La ganancia `L` determina la rapidez y estabilidad de la convergencia del error. Su cálculo, los polos resultantes y las condiciones de inicialización del observador Aero 2 se presentan en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).
+La ganancia `L` determina la rapidez y estabilidad de la convergencia del error. Su cálculo, los polos resultantes y las condiciones de inicialización del observador Aero 2 se presentan en [Integración y evidencia]({{ '/04-resultados-entrega/' | relative_url }}).
 
 ## 4. Validación del observador
 
-La evaluación compara los estados de la planta con sus estimaciones y considera el error, la convergencia y la respuesta ante cambios de referencia. Las gráficas y el análisis se presentan en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).
+La evaluación compara los estados de la planta con sus estimaciones y considera el error, la convergencia y la respuesta ante cambios de referencia. Las gráficas y el análisis se presentan en [Integración y evidencia]({{ '/04-resultados-entrega/' | relative_url }}).
 
 <div class="report-figure">
   <img src="{{ '/assets/css/imag/observador.png' | relative_url }}" alt="Diagrama del observador de estados implementado" class="report-figure__image">

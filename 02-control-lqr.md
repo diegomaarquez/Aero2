@@ -114,7 +114,7 @@ La ley calculada es `u = -K_lqr x`. Los valores que MATLAB muestra para `K_lqr` 
 
 ## 5. Implementación
 
-La implementación calcula la ganancia LQR a partir del modelo linealizado y las ponderaciones indicadas, y evalúa los polos de la matriz de lazo cerrado. Las respuestas de cabeceo y guiñada, las señales de control y la comparación experimental se presentan en [Resultados y conclusiones]({{ '/04-resultados-entrega/' | relative_url }}).
+La implementación calcula la ganancia LQR a partir del modelo linealizado y las ponderaciones indicadas, y evalúa los polos de la matriz de lazo cerrado. Las respuestas de cabeceo y guiñada, las señales de control y la comparación experimental se presentan en [Integración y evidencia]({{ '/04-resultados-entrega/' | relative_url }}).
 
 <div class="report-figure">
   <img src="{{ '/assets/css/imag/modelo_lqr_observador_separado.png' | relative_url }}" alt="Modelo LQR con observador para visualizar su respuesta, manteniendo cerrado el lazo con el filtro Quanser" class="report-figure__image">

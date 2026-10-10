@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Resultados y conclusiones
+title: Integración y evidencia
 nav_order: 5
 ---
 
-# Resultados y conclusiones
+# Integración y evidencia
 
 El sistema integra el modelo linealizado del Quanser Aero 2, el controlador LQR y el observador de estados. A continuación se presentan la evidencia de funcionamiento y la síntesis de resultados; los procedimientos, las gráficas y el análisis cuantitativo completo están disponibles en el [informe técnico]({{ '/05-informe-tecnico/' | relative_url }}).
 
